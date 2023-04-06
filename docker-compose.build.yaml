@@ -22,4 +22,6 @@ services:
       - "2222:22"
     environment:
       - ssh_root_password=yingshaoxo
+    volumes:
+      - "~/ubuntu_docker:/root"
     restart: unless-stopped

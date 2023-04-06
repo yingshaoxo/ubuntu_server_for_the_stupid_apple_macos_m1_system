@@ -143,3 +143,15 @@ commands = [
 ]
 for command in commands:
     subprocess.check_call(command, shell=True)
+
+
+if not os.path.exists("/root"):
+    os.mkdir("/root")
+
+with open("/root/.bashrc", mode='r', encoding='utf-8') as f:
+    bashrc = f.read()
+if "cd /root" not in bashrc:
+    bashrc += "/n/ncd /root"
+
+with open("/root/.bashrc", mode='w', encoding='utf-8') as f:
+    f.write(bashrc)

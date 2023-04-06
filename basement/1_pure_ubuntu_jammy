@@ -6,9 +6,5 @@
 
 FROM amd64/ubuntu:jammy
 
-# RUN apt update
-# RUN apt install wget -y
-# RUN apt install curl -y
-
 CMD ["sleep","infinity"]
 # CMD ["/bin/bash"]

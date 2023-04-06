@@ -6,6 +6,10 @@ ENV ssh_root_password yingshaoxo
 
 RUN apt update
 RUN apt install openssh-server -y
+RUN apt install vim -y
+RUN apt install wget -y
+RUN apt install curl -y
+
 RUN mkdir /var/run/sshd
 
 COPY ./2.set_ssh_password_script.py /2.set_ssh_password_script.py
