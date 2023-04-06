@@ -1,6 +1,6 @@
-# docker build -f basement/2_ssh_ubuntu --tag yingshaoxo/ubuntu_server_for_the_stupid_apple_macos_m1_system_2 .
+# docker build -f basement/2_ssh_ubuntu --tag yingshaoxo/ubuntu_ssh_server_for_the_stupid_apple_macos_m1_system_2 .
 
-FROM yingshaoxo/ubuntu_server_for_the_stupid_apple_macos_m1_system_1
+FROM yingshaoxo/ubuntu_ssh_server_for_the_stupid_apple_macos_m1_system_1
 
 RUN apt update
 RUN apt install openssh-server -y

@@ -7,7 +7,7 @@ services:
     build: 
       context: ./basement/
       dockerfile: ./1_pure_ubuntu_jammy
-    image: yingshaoxo/ubuntu_server_for_the_stupid_apple_macos_m1_system_1
+    image: yingshaoxo/ubuntu_ssh_server_for_the_stupid_apple_macos_m1_system_1
     restart: unless-stopped
   2_ssh_ubuntu:
     depends_on:
@@ -17,7 +17,7 @@ services:
     build: 
       context: ./basement/
       dockerfile: ./2_ssh_ubuntu
-    image: yingshaoxo/ubuntu_server_for_the_stupid_apple_macos_m1_system_2
+    image: yingshaoxo/ubuntu_ssh_server_for_the_stupid_apple_macos_m1_system
     ports:
       - "2222:22"
     environment:

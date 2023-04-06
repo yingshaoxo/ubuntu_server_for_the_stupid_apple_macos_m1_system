@@ -1,8 +1,8 @@
-# docker build -f basement/1_pure_ubuntu_jammy --tag yingshaoxo/ubuntu_server_for_the_stupid_apple_macos_m1_system_1 .
-# docker run -it --name 1_pure_ubuntu_jammy yingshaoxo/ubuntu_server_for_the_stupid_apple_macos_m1_system_1
+# docker build -f basement/1_pure_ubuntu_jammy --tag yingshaoxo/ubuntu_ssh_server_for_the_stupid_apple_macos_m1_system_1 .
+# docker run -it --name 1_pure_ubuntu_jammy yingshaoxo/ubuntu_ssh_server_for_the_stupid_apple_macos_m1_system_1
 # docker stop --name 1_pure_ubuntu_jammy
 # docker rm --name 1_pure_ubuntu_jammy
-# docker rmi yingshaoxo/ubuntu_server_for_the_stupid_apple_macos_m1_system_1
+# docker rmi yingshaoxo/ubuntu_ssh_server_for_the_stupid_apple_macos_m1_system_1
 
 FROM amd64/ubuntu:jammy
 
