@@ -131,9 +131,11 @@ with open("/etc/ssh/sshd_config", mode="w", encoding="utf-8") as f:
     f.write(sshd_config)
 
 
-password = os.environ['ssh_root_password']
-cmd = f"bash -c \"echo -e '{password}\\n{password}' | passwd root\""
-subprocess.check_call(cmd, shell=True)
+password = os.environ.get('ssh_root_password')
+if password != None and len(password) > 0:
+    password = password.strip()
+    cmd = f"bash -c \"echo -e '{password}\\n{password}' | passwd root\""
+    subprocess.check_call(cmd, shell=True)
 
 
 commands = [
@@ -145,13 +147,14 @@ for command in commands:
     subprocess.check_call(command, shell=True)
 
 
-if not os.path.exists("/root"):
-    os.mkdir("/root")
+# if not os.path.exists("/root"):
+#     os.mkdir("/root")
 
-with open("/root/.bashrc", mode='r', encoding='utf-8') as f:
-    bashrc = f.read()
-if "cd /root" not in bashrc:
-    bashrc += "/n/ncd /root"
+# if os.path.exists("/root/.bashrc"):
+#     with open("/root/.bashrc", mode='r', encoding='utf-8') as f:
+#         bashrc = f.read()
+#     if "cd /root" not in bashrc:
+#         bashrc += "/n/ncd /root"
 
-with open("/root/.bashrc", mode='w', encoding='utf-8') as f:
-    f.write(bashrc)
+#     with open("/root/.bashrc", mode='w', encoding='utf-8') as f:
+#         f.write(bashrc)
