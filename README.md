@@ -1,4 +1,4 @@
-# `Ubuntu SSH Server` for The Stupid `Apple Macos M1 System`
+# Ubuntu SSH Server for The Stupid `Apple Macos M1 System`
 
 ## Build
 Edit `ssh_root_password` environment variable in `docker-compose.build.yaml` file first.
