@@ -1,1 +1,1 @@
-# ubuntu_server_for_the_stupid_macos_m1_system
+# ubuntu_server_for_the_stupid_apple_macos_m1_system
