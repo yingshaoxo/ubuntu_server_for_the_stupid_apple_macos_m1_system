@@ -1,6 +1,6 @@
-# ubuntu_server_for_the_stupid_apple_macos_m1_system
+# `Ubuntu SSH Server` for The Stupid `Apple Macos M1 System`
 
-## build
+## Build
 Edit `ssh_root_password` environment variable in `docker-compose.build.yaml` file first.
 
 Then:
@@ -9,7 +9,7 @@ Then:
 docker-compose -f docker-compose.build.yaml build
 ```
 
-## run
+## Run
 ```bash
 docker-compose -f docker-compose.build.yaml up -d
 ssh root@127.0.0.1 -p 2222
