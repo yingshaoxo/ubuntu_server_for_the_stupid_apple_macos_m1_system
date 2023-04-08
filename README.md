@@ -42,6 +42,12 @@ cd /root
 
 export ssh_root_password=yingshaoxo
 curl -sSL https://raw.githubusercontent.com/yingshaoxo/ubuntu_ssh_server_for_the_stupid_apple_macos_m1_system/main/basement/2.set_ssh_password_script.py | python3
+
+sudo chown -R $(whoami):$(whoami) .
+sudo chmod g+rw .
+
+exit
+exit
 ```
 
 ```bash
